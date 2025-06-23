@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yordamchi - Terms of Service</title>
+    <!-- Chosen Palette: Calm Clarity -->
+    <!-- Application Structure Plan: A single-page application designed for clarity and ease of navigation of a legal document. The structure features a main header, followed by a user-friendly "Key Points at a Glance" section with expandable accordions for quick summaries. The core layout is a two-column design: a sticky left-hand sidebar for navigation and a main content area on the right. The sidebar uses a "scrollspy" interaction, highlighting the section currently in view, allowing users to quickly see where they are and jump to other sections. Each section of the terms is presented as a distinct "card" to break up the text visually. This structure was chosen because it transforms a dense, static legal document into an accessible, interactive guide, which is more user-friendly than a plain text page. -->
+    <!-- Visualization & Content Choices: The source material is purely textual (a legal document), so traditional data visualization is not applicable. The goal is to organize and inform. The chosen presentation method uses structured and semantic HTML (header, nav, main, section), styled with Tailwind CSS for a clean, readable layout. Key interactive elements include a smooth-scrolling sidebar with an active-section indicator (scrollspy) and collapsible summary points. This approach was chosen to enhance readability and navigability, making the legal information significantly more accessible for the average user. No Chart.js or Plotly.js is needed or used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .prose {
+            max-width: none;
+        }
+        .nav-link.active {
+            background-color: #E3F2FD;
+            color: #1976D2;
+            font-weight: 600;
+        }
+        .lang-btn.active {
+            background-color: #1976D2;
+            color: white;
+        }
+        .lang-btn.active:hover {
+            background-color: #1565C0;
+            color: white;
+        }
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary .arrow {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="container mx-auto px-4 py-8 md:py-12">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold text-blue-800">Yordamchi</h1>
+            <p class="text-xl text-slate-600 mt-2" data-i18n="page-title">Terms of Service</p>
+            <p class="text-sm text-slate-500 mt-1" data-i18n="effective-date">Last updated: 2025-06-23</p>
+            
+            <!-- Language Toggle -->
+            <div class="mt-6">
+                <div class="inline-flex bg-white rounded-lg shadow-md overflow-hidden">
+                    <button class="lang-btn px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 transition-colors duration-200" data-lang="uz">O'zbekcha</button>
+                    <button class="lang-btn px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 transition-colors duration-200" data-lang="en">English</button>
+                    <button class="lang-btn px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-50 transition-colors duration-200" data-lang="ru">Русский</button>
+                </div>
+            </div>
+        </header>
+
+        <div class="flex flex-col md:flex-row md:space-x-8">
+
+            <!-- Sticky Navigation -->
+            <aside class="md:w-1/4 mb-8 md:mb-0">
+                <nav id="sidebar-nav" class="sticky top-8 bg-white md:bg-transparent rounded-lg shadow-md md:shadow-none p-4 md:p-0">
+                    <h3 class="text-lg font-semibold text-slate-800 mb-3 hidden md:block" data-i18n="nav-title">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#summary" class="nav-link block px-4 py-2 rounded-md text-slate-600 hover:bg-slate-100 transition-colors duration-200">Key Points</a></li>
+                        <li><a href="#acceptance" class="nav-link block px-4 py-2 rounded-md text-slate-600 hover:bg-slate-100 transition-colors duration-200">1. Acceptance</a></li>
+                        <li><a href="#service" class="nav-link block px-4 py-2 rounded-md text-slate-600 hover:bg-slate-100 transition-colors duration-200">2. Service</a></li>
+                        <li><a href="#conduct" class="nav-link block px-4 py-2 rounded-md text-slate-600 hover:bg-slate-100 transition-colors duration-200">3. Conduct</a></li>
+                        <li><a href="#intellectual-property" class="nav-link block px-4 py-2 rounded-md text-slate-600 hover:bg-slate-100 transition-colors duration-200">4. IP</a></li>
+                        <li><a href="#disclaimers" class="nav-link block px-4 py-2 rounded-md text-slate-600 hover:bg-slate-100 transition-colors duration-200">5. Disclaimers</a></li>
+                        <li><a href="#liability" class="nav-link block px-4 py-2 rounded-md text-slate-600 hover:bg-slate-100 transition-colors duration-200">6. Liability</a></li>
+                        <li><a href="#termination" class="nav-link block px-4 py-2 rounded-md text-slate-600 hover:bg-slate-100 transition-colors duration-200">7. Termination</a></li>
+                        <li><a href="#law" class="nav-link block px-4 py-2 rounded-md text-slate-600 hover:bg-slate-100 transition-colors duration-200">8. Governing Law</a></li>
+                        <li><a href="#contact" class="nav-link block px-4 py-2 rounded-md text-slate-600 hover:bg-slate-100 transition-colors duration-200">9. Contact</a></li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="w-full md:w-3/4">
+                <div class="space-y-8">
+                    
+                    <section id="summary" class="scroll-mt-20 bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold mb-4 text-blue-700 flex items-center">
+                            <span class="text-3xl mr-3">💡</span> Key Points at a Glance
+                        </h2>
+                        <p class="text-slate-600 mb-6">Here’s a quick, plain-language summary of our terms. The full legal terms follow below and are the ones that apply.</p>
+                        <div class="space-y-3">
+                            <details class="border rounded-md p-3 bg-slate-50">
+                                <summary class="font-semibold cursor-pointer flex justify-between items-center">
+                                    <span>By using the app, you agree to these rules.</span>
+                                    <span class="arrow transition-transform duration-200 transform text-blue-500">&#9654;</span>
+                                </summary>
+                                <p class="mt-2 text-slate-600 text-sm">Your use of Yordamchi means you accept these Terms of Service. If you don't agree, please don't use the app.</p>
+                            </details>
+                            <details class="border rounded-md p-3 bg-slate-50">
+                                <summary class="font-semibold cursor-pointer flex justify-between items-center">
+                                    <span>Use the app responsibly.</span>
+                                    <span class="arrow transition-transform duration-200 transform text-blue-500">&#9654;</span>
+                                </summary>
+                                <p class="mt-2 text-slate-600 text-sm">You agree not to use Yordamchi for anything illegal, harmful, or abusive. Play fair and keep our community safe.</p>
+                            </details>
+                             <details class="border rounded-md p-3 bg-slate-50">
+                                <summary class="font-semibold cursor-pointer flex justify-between items-center">
+                                    <span>We own the app and its content.</span>
+                                    <span class="arrow transition-transform duration-200 transform text-blue-500">&#9654;</span>
+                                </summary>
+                                <p class="mt-2 text-slate-600 text-sm">The Yordamchi app, its brand, and technology are our intellectual property. You can use it, but you don't own it.</p>
+                            </details>
+                            <details class="border rounded-md p-3 bg-slate-50">
+                                <summary class="font-semibold cursor-pointer flex justify-between items-center">
+                                    <span>The app is provided "as is".</span>
+                                    <span class="arrow transition-transform duration-200 transform text-blue-500">&#9654;</span>
+                                </summary>
+                                <p class="mt-2 text-slate-600 text-sm">We provide the app without any warranties. The information may not always be 100% accurate, so please don't rely on it for critical decisions (legal, financial, medical).</p>
+                            </details>
+                        </div>
+                    </section>
+                    
+                    <section id="acceptance" class="prose scroll-mt-20 bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold">1. Acceptance of Terms</h2>
+                        <p>By downloading, accessing, or using the Yordamchi App, you agree to be bound by these Terms. If you do not agree to these Terms, you may not use the App. We may update these Terms from time to time, and your continued use of the App signifies your acceptance of the revised Terms.</p>
+                    </section>
+
+                    <section id="service" class="prose scroll-mt-20 bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold">2. Description of Service</h2>
+                        <p>Yordamchi is a chatbot application designed to act as a virtual assistant, providing information, answering questions, and performing tasks based on user interactions. The service is provided for informational and assistance purposes.</p>
+                    </section>
+
+                    <section id="conduct" class="prose scroll-mt-20 bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold">3. User Conduct and Responsibilities</h2>
+                        <p>You agree to use the Yordamchi App only for lawful purposes. You are responsible for all your activity in connection with the App. You agree not to:</p>
+                        <ul>
+                            <li>Use the App for any illegal or unauthorized purpose.</li>
+                            <li>Transmit any content that is abusive, harassing, defamatory, obscene, fraudulent, or otherwise objectionable.</li>
+                            <li>Attempt to interfere with, compromise the system integrity or security, or decipher any transmissions to or from the servers running the App.</li>
+                            <li>Upload or transmit viruses, worms, or any other malicious code.</li>
+                            <li>Attempt to gain unauthorized access to the App or its related systems or networks.</li>
+                        </ul>
+                    </section>
+
+                    <section id="intellectual-property" class="prose scroll-mt-20 bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold">4. Intellectual Property</h2>
+                        <p>All rights, title, and interest in and to the App (excluding user-provided content), including all associated intellectual property rights, are and will remain the exclusive property of ChuqurTech and its licensors. The name "Yordamchi" and "ChuqurTech" and all related logos are trademarks of the Company. You may not use these trademarks without our prior written permission.</p>
+                    </section>
+                    
+                    <section id="disclaimers" class="prose scroll-mt-20 bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold">5. Disclaimers</h2>
+                        <p>The Yordamchi App is provided "as is" and "as available" without any warranties of any kind, either express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+                        <p>We do not warrant that:</p>
+                        <ul>
+                            <li>The App will be secure or available at any particular time or location.</li>
+                            <li>Any defects or errors will be corrected.</li>
+                            <li>The results of using the App will meet your requirements.</li>
+                        </ul>
+                        <p>The information provided by Yordamchi may not always be accurate or complete. You should not rely solely on the information provided by the App for any legal, financial, or medical decisions.</p>
+                    </section>
+                    
+                    <section id="liability" class="prose scroll-mt-20 bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold">6. Limitation of Liability</h2>
+                        <p>To the maximum extent permitted by applicable law, in no event shall ChuqurTech, its affiliates, agents, directors, or employees be liable for any indirect, punitive, incidental, special, consequential, or exemplary damages, including without limitation damages for loss of profits, goodwill, use, data, or other intangible losses, that result from the use of, or inability to use, this App.</p>
+                    </section>
+                    
+                    <section id="termination" class="prose scroll-mt-20 bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold">7. Termination</h2>
+                        <p>We may terminate or suspend your access to the App immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the App will immediately cease.</p>
+                    </section>
+                    
+                    <section id="law" class="prose scroll-mt-20 bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold">8. Governing Law</h2>
+                        <p>These Terms shall be governed and construed in accordance with the laws of the Republic of Uzbekistan, without regard to its conflict of law provisions.</p>
+                    </section>
+
+                    <section id="contact" class="prose scroll-mt-20 bg-white p-6 rounded-lg shadow-md">
+                        <h2 class="text-2xl font-bold">9. Contact Us</h2>
+                        <p>If you have any questions about these Terms, please contact us at:</p>
+                        <div class="mt-4 p-4 bg-slate-100 rounded-md not-prose">
+                            <p class="font-semibold">ChuqurTech</p>
+                            <p>Andijan, Uzbekistan</p>
+                            <p>Email: <a href="mailto:yordamchi@chuqurtech.uz" class="text-blue-600 hover:underline">yordamchi@chuqurtech.uz</a></p>
+                        </div>
+                    </section>
+
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Translation data
+        const translations = {
+            en: {
+                'page-title': 'Terms of Service',
+                'effective-date': 'Last updated: 2025-06-23',
+                'nav-title': 'Navigation',
+                'nav-keypoints': 'Key Points',
+                'nav-acceptance': '1. Acceptance',
+                'nav-service': '2. Service',
+                'nav-conduct': '3. Conduct',
+                'nav-ip': '4. IP',
+                'nav-disclaimers': '5. Disclaimers',
+                'nav-liability': '6. Liability',
+                'nav-termination': '7. Termination',
+                'nav-law': '8. Governing Law',
+                'nav-contact': '9. Contact',
+                'keypoints-title': 'Key Points at a Glance',
+                'keypoints-subtitle': "Here's a quick, plain-language summary of our terms. The full legal terms follow below and are the ones that apply.",
+                'summary-1-title': 'By using the app, you agree to these rules.',
+                'summary-1-text': "Your use of Yordamchi means you accept these Terms of Service. If you don't agree, please don't use the app.",
+                'summary-2-title': 'Use the app responsibly.',
+                'summary-2-text': 'You agree not to use Yordamchi for anything illegal, harmful, or abusive. Play fair and keep our community safe.',
+                'summary-3-title': 'We own the app and its content.',
+                'summary-3-text': "The Yordamchi app, its brand, and technology are our intellectual property. You can use it, but you don't own it.",
+                'summary-4-title': 'The app is provided "as is".',
+                'summary-4-text': "We provide the app without any warranties. The information may not always be 100% accurate, so please don't rely on it for critical decisions (legal, financial, medical).",
+                'section-1-title': '1. Acceptance of Terms',
+                'section-1-text': 'By downloading, accessing, or using the Yordamchi App, you agree to be bound by these Terms. If you do not agree to these Terms, you may not use the App. We may update these Terms from time to time, and your continued use of the App signifies your acceptance of the revised Terms.',
+                'section-2-title': '2. Description of Service',
+                'section-2-text': 'Yordamchi is a chatbot application designed to act as a virtual assistant, providing information, answering questions, and performing tasks based on user interactions. The service is provided for informational and assistance purposes.',
+                'section-3-title': '3. User Conduct and Responsibilities',
+                'section-3-text': 'You agree to use the Yordamchi App only for lawful purposes. You are responsible for all your activity in connection with the App. You agree not to:',
+                'section-3-list': [
+                    'Use the App for any illegal or unauthorized purpose.',
+                    'Transmit any content that is abusive, harassing, defamatory, obscene, fraudulent, or otherwise objectionable.',
+                    'Attempt to interfere with, compromise the system integrity or security, or decipher any transmissions to or from the servers running the App.',
+                    'Upload or transmit viruses, worms, or any other malicious code.',
+                    'Attempt to gain unauthorized access to the App or its related systems or networks.'
+                ],
+                'section-4-title': '4. Intellectual Property',
+                'section-4-text': 'All rights, title, and interest in and to the App (excluding user-provided content), including all associated intellectual property rights, are and will remain the exclusive property of ChuqurTech and its licensors. The name "Yordamchi" and "ChuqurTech" and all related logos are trademarks of the Company. You may not use these trademarks without our prior written permission.',
+                'section-5-title': '5. Disclaimers',
+                'section-5-text': 'The Yordamchi App is provided "as is" and "as available" without any warranties of any kind, either express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, or non-infringement.',
+                'section-5-text2': 'We do not warrant that:',
+                'section-5-list': [
+                    'The App will be secure or available at any particular time or location.',
+                    'Any defects or errors will be corrected.',
+                    'The results of using the App will meet your requirements.'
+                ],
+                'section-5-text3': 'The information provided by Yordamchi may not always be accurate or complete. You should not rely solely on the information provided by the App for any legal, financial, or medical decisions.',
+                'section-6-title': '6. Limitation of Liability',
+                'section-6-text': 'To the maximum extent permitted by applicable law, in no event shall ChuqurTech, its affiliates, agents, directors, or employees be liable for any indirect, punitive, incidental, special, consequential, or exemplary damages, including without limitation damages for loss of profits, goodwill, use, data, or other intangible losses, that result from the use of, or inability to use, this App.',
+                'section-7-title': '7. Termination',
+                'section-7-text': 'We may terminate or suspend your access to the App immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the App will immediately cease.',
+                'section-8-title': '8. Governing Law',
+                'section-8-text': 'These Terms shall be governed and construed in accordance with the laws of the Republic of Uzbekistan, without regard to its conflict of law provisions.',
+                'section-9-title': '9. Contact Us',
+                'section-9-text': 'If you have any questions about these Terms, please contact us at:',
+                'contact-company': 'ChuqurTech',
+                'contact-location': 'Andijan, Uzbekistan',
+                'contact-email': 'Email:'
+            },
+            uz: {
+                'page-title': 'Foydalanish shartlari',
+                'effective-date': 'Oxirgi tahrir: 2025-06-23',
+                'nav-title': 'Navigatsiya',
+                'nav-keypoints': 'Asosiy fikrlar',
+                'nav-acceptance': '1. Qabul qilish',
+                'nav-service': '2. Xizmat',
+                'nav-conduct': '3. Xulq-atvor',
+                'nav-ip': '4. Intellektual mulk',
+                'nav-disclaimers': '5. Rad etish',
+                'nav-liability': '6. Javobgarlik',
+                'nav-termination': '7. To\'xtatish',
+                'nav-law': '8. Qonun',
+                'nav-contact': '9. Aloqa',
+                'keypoints-title': 'Asosiy fikrlar bir qarashda',
+                'keypoints-subtitle': 'Bu bizning shartlarimizning tez va tushunarli xulosasi. Quyida keltirilgan to\'liq huquqiy shartlar amal qiladi.',
+                'summary-1-title': 'Ilovani ishlatish orqali siz ushbu qoidalarni qabul qilasiz.',
+                'summary-1-text': 'Yordamchidan foydalanish Foydalanish shartlarini qabul qilishni anglatadi. Agar rozimagan bo\'lsangiz, iltimos, ilovani ishlatmang.',
+                'summary-2-title': 'Ilovadan mas\'uliyat bilan foydalaning.',
+                'summary-2-text': 'Siz Yordamchini noqonuniy, zararli yoki haqoratli maqsadlarda ishlatmaslikka rozilik bildirasiz. Adolatli bo\'ling va hamjamiyatimizni xavfsiz saqlang.',
+                'summary-3-title': 'Biz ilova va uning tarkibiga egamiz.',
+                'summary-3-text': 'Yordamchi ilovasi, uning brendi va texnologiyasi bizning intellektual mulkimizdir. Uni ishlatishingiz mumkin, lekin unga ega emassiz.',
+                'summary-4-title': 'Ilova "bor holda" taqdim etiladi.',
+                'summary-4-text': 'Biz ilovani hech qanday kafolatsiz taqdim etamiz. Ma\'lumotlar har doim ham 100% aniq bo\'lmasligi mumkin, shuning uchun muhim qarorlar uchun unga tayanmang.',
+                'section-1-title': '1. Shartlarni qabul qilish',
+                'section-1-text': 'Yordamchi ilovasini yuklab olish, unga kirish yoki undan foydalanish orqali siz ushbu Shartlar bilan bog\'lanishga rozilik bildirasiz. Agar siz ushbu Shartlarga rozi bo\'lmasangiz, ilovadan foydalana olmaysiz. Biz vaqti-vaqti bilan ushbu Shartlarni yangilashimiz mumkin va ilovadan davomiy foydalanishingiz qayta ko\'rib chiqilgan Shartlarni qabul qilishingizni bildiradi.',
+                'section-2-title': '2. Xizmat tavsifi',
+                'section-2-text': 'Yordamchi - bu virtual yordamchi bo\'lib ishlash, ma\'lumot berish, savollarga javob berish va foydalanuvchi bilan o\'zaro ta\'sir asosida vazifalarni bajarish uchun mo\'ljallangan chatbot ilovasi. Xizmat ma\'lumot berish va yordam maqsadida ko\'rsatiladi.',
+                'section-3-title': '3. Foydalanuvchi xulq-atvori va mas\'uliyati',
+                'section-3-text': 'Siz Yordamchi ilovasidan faqat qonuniy maqsadlarda foydalanishga rozilik bildirasiz. Siz ilova bilan bog\'liq barcha faoliyatingiz uchun javobgarsiz. Siz quyidagilarni qilmaslikka rozilik bildirasiz:',
+                'section-3-list': [
+                    'Ilovani har qanday noqonuniy yoki ruxsatsiz maqsadda ishlatish.',
+                    'Haqoratli, ta\'qibchi, tuhmatli, odobsiz, firibgar yoki boshqa jihatdan nomaqbul tarkibni uzatish.',
+                    'Tizim yaxlitligi yoki xavfsizligiga xalaqit berish, buzishga urinish yoki ilova serverlariga yoki undan uzatilgan ma\'lumotlarni shifrini ochishga urinish.',
+                    'Viruslar, qurtlar yoki boshqa zararli kodlarni yuklash yoki uzatish.',
+                    'Ilova yoki unga bog\'liq tizimlar yoki tarmoqlarga ruxsatsiz kirish olishga urinish.'
+                ],
+                'section-4-title': '4. Intellektual mulk',
+                'section-4-text': 'Ilovaga (foydalanuvchi tomonidan taqdim etilgan tarkib bundan mustasno) va barcha bog\'liq intellektual mulk huquqlariga bo\'lgan barcha huquqlar, unvon va manfaatlar ChuqurTech va uning litsenziya beruvchilarining eksklyuziv mulki hisoblanadi va shunday bo\'lib qoladi. "Yordamchi" va "ChuqurTech" nomlari va barcha tegishli logotiplar Kompaniyaning savdo belgilaridir. Siz bizning oldindan yozma ruxsatimizda ushbu savdo belgilaridan foydalana olmaysiz.',
+                'section-5-title': '5. Rad etish',
+                'section-5-text': 'Yordamchi ilovasi har qanday turdagi, aniq yoki nazarda tutilgan kafolatlar, jumladan, sotuvga yaroqlilik, ma\'lum maqsad uchun mosligi yoki huquqbuzarlik bo\'lmasligi haqidagi nazarda tutilgan kafolatlar bilan cheklanmasdan "bor holda" va "mavjud holda" taqdim etiladi.',
+                'section-5-text2': 'Biz quyidagilarni kafolatlamayamiz:',
+                'section-5-list': [
+                    'Ilova har qanday vaqtda yoki joyda xavfsiz yoki mavjud bo\'ladi.',
+                    'Har qanday kamchiliklar yoki xatolar tuzatiladi.',
+                    'Ilovadan foydalanish natijalari sizning talablaringizni qondiradi.'
+                ],
+                'section-5-text3': 'Yordamchi tomonidan taqdim etilgan ma\'lumotlar har doim ham aniq yoki to\'liq bo\'lmasligi mumkin. Har qanday huquqiy, moliyaviy yoki tibbiy qarorlar uchun faqat ilova tomonidan taqdim etilgan ma\'lumotlarga tayanmaslik kerak.',
+                'section-6-title': '6. Javobgarlik cheklovi',
+                'section-6-text': 'Amal qiluvchi qonun tomonidan ruxsat etilgan maksimal darajada, hech qanday holatda ChuqurTech, uning hamkorlarai, agentlari, direktorlari yoki xodimlari ushbu Ilovadan foydalanish yoki foydalana olmaslik natijasida yuzaga keladigan bilvosita, jazolovchi, tasodifiy, maxsus, oqibatli yoki ibratli zararlar, jumladan foyda, yaxshi niyat, foydalanish, ma\'lumotlar yoki boshqa nomoddiy yo\'qotishlar uchun javobgar bo\'lmaydi.',
+                'section-7-title': '7. To\'xtatish',
+                'section-7-text': 'Biz har qanday sababga ko\'ra, jumladan Shartlarni buzganingiz tufayli, oldindan ogohlantirmasdan yoki javobgarliksiz ilovaga kirishingizni darhol to\'xtatishimiz yoki to\'xtatib qo\'yishimiz mumkin. To\'xtatilgandan so\'ng, ilovadan foydalanish huquqingiz darhol to\'xtaydi.',
+                'section-8-title': '8. Amal qiluvchi qonun',
+                'section-8-text': 'Ushbu Shartlar O\'zbekiston Respublikasi qonunlariga muvofiq tartibga solinadi va izohlanadi, uning qonun nizolari qoidalaridan qat\'i nazar.',
+                'section-9-title': '9. Biz bilan bog\'laning',
+                'section-9-text': 'Agar sizda ushbu Shartlar haqida savollar bo\'lsa, iltimos, biz bilan bog\'laning:',
+                'contact-company': 'ChuqurTech',
+                'contact-location': 'Andijon, O\'zbekiston',
+                'contact-email': 'Elektron pochta:'
+            },
+            ru: {
+                'page-title': 'Условия использования',
+                'effective-date': 'Последнее обновление: 2025-06-23',
+                'nav-title': 'Навигация',
+                'nav-keypoints': 'Ключевые моменты',
+                'nav-acceptance': '1. Принятие',
+                'nav-service': '2. Услуга',
+                'nav-conduct': '3. Поведение',
+                'nav-ip': '4. Интел. собств.',
+                'nav-disclaimers': '5. Отказы',
+                'nav-liability': '6. Ответственность',
+                'nav-termination': '7. Прекращение',
+                'nav-law': '8. Право',
+                'nav-contact': '9. Контакты',
+                'keypoints-title': 'Ключевые моменты с первого взгляда',
+                'keypoints-subtitle': 'Вот краткое изложение наших условий простым языком. Полные юридические условия приведены ниже и являются действующими.',
+                'summary-1-title': 'Используя приложение, вы соглашаетесь с этими правилами.',
+                'summary-1-text': 'Ваше использование Yordamchi означает принятие этих Условий использования. Если вы не согласны, пожалуйста, не используйте приложение.',
+                'summary-2-title': 'Используйте приложение ответственно.',
+                'summary-2-text': 'Вы соглашаетесь не использовать Yordamchi для незаконных, вредных или оскорбительных целей. Играйте честно и обеспечьте безопасность нашего сообщества.',
+                'summary-3-title': 'Мы владеем приложением и его содержимым.',
+                'summary-3-text': 'Приложение Yordamchi, его бренд и технологии являются нашей интеллектуальной собственностью. Вы можете использовать их, но не владеете ими.',
+                'summary-4-title': 'Приложение предоставляется "как есть".',
+                'summary-4-text': 'Мы предоставляем приложение без каких-либо гарантий. Информация может быть не всегда 100% точной, поэтому не полагайтесь на нее при принятии важных решений.',
+                'section-1-title': '1. Принятие условий',
+                'section-1-text': 'Загружая, получая доступ или используя приложение Yordamchi, вы соглашаетесь соблюдать эти Условия. Если вы не согласны с этими Условиями, вы не можете использовать Приложение. Мы можем время от времени обновлять эти Условия, и ваше продолжающееся использование Приложения означает ваше принятие пересмотренных Условий.',
+                'section-2-title': '2. Описание услуги',
+                'section-2-text': 'Yordamchi — это приложение-чатбот, предназначенное для работы в качестве виртуального помощника, предоставления информации, ответов на вопросы и выполнения задач на основе взаимодействия с пользователем. Услуга предоставляется в информационных и вспомогательных целях.',
+                'section-3-title': '3. Поведение и обязанности пользователя',
+                'section-3-text': 'Вы соглашаетесь использовать приложение Yordamchi только в законных целях. Вы несете ответственность за всю свою деятельность в связи с Приложением. Вы соглашаетесь не:',
+                'section-3-list': [
+                    'Использовать Приложение для любых незаконных или несанкционированных целей.',
+                    'Передавать любой контент, который является оскорбительным, домогательским, клеветническим, непристойным, мошенническим или иным образом неприемлемым.',
+                    'Пытаться вмешиваться, нарушать целостность системы или безопасность, или расшифровывать любые передачи на серверы, запускающие Приложение, или с них.',
+                    'Загружать или передавать вирусы, черви или любой другой вредоносный код.',
+                    'Пытаться получить несанкционированный доступ к Приложению или связанным с ним системам или сетям.'
+                ],
+                'section-4-title': '4. Интеллектуальная собственность',
+                'section-4-text': 'Все права, титул и интересы в Приложении (исключая предоставленный пользователем контент), включая все связанные права интеллектуальной собственности, являются и останутся исключительной собственностью ChuqurTech и его лицензиаров. Название "Yordamchi" и "ChuqurTech" и все связанные логотипы являются торговыми марками Компании. Вы не можете использовать эти торговые марки без нашего предварительного письменного разрешения.',
+                'section-5-title': '5. Отказы от ответственности',
+                'section-5-text': 'Приложение Yordamchi предоставляется "как есть" и "как доступно" без каких-либо гарантий любого рода, явных или подразумеваемых, включая, но не ограничиваясь, подразумеваемые гарантии товарности, пригодности для определенной цели или ненарушения прав.',
+                'section-5-text2': 'Мы не гарантируем что:',
+                'section-5-list': [
+                    'Приложение будет безопасным или доступным в любое определенное время или в любом месте.',
+                    'Любые дефекты или ошибки будут исправлены.',
+                    'Результаты использования Приложения будут соответствовать вашим требованиям.'
+                ],
+                'section-5-text3': 'Информация, предоставляемая Yordamchi, может не всегда быть точной или полной. Вы не должны полагаться исключительно на информацию, предоставляемую Приложением, для любых юридических, финансовых или медицинских решений.',
+                'section-6-title': '6. Ограничение ответственности',
+                'section-6-text': 'В максимальной степени, разрешенной применимым законодательством, ни при каких обстоятельствах ChuqurTech, его аффилированные лица, агенты, директора или сотрудники не несут ответственности за любые косвенные, штрафные, случайные, специальные, последующие или примерные ущербы, включая, без ограничения, ущерб от потери прибыли, деловой репутации, использования, данных или других нематериальных потерь, которые возникают в результате использования этого Приложения или невозможности его использования.',
+                'section-7-title': '7. Прекращение',
+                'section-7-text': 'Мы можем немедленно прекратить или приостановить ваш доступ к Приложению без предварительного уведомления или ответственности по любой причине, включая, без ограничения, если вы нарушаете Условия. После прекращения ваше право использовать Приложение немедленно прекращается.',
+                'section-8-title': '8. Применимое право',
+                'section-8-text': 'Эти Условия регулируются и толкуются в соответствии с законами Республики Узбекистан, без учета его положений о коллизии права.',
+                'section-9-title': '9. Свяжитесь с нами',
+                'section-9-text': 'Если у вас есть вопросы об этих Условиях, пожалуйста, свяжитесь с нами:',
+                'contact-company': 'ChuqurTech',
+                'contact-location': 'Андижан, Узбекистан',
+                'contact-email': 'Электронная почта:'
+            }
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Navigation scrollspy
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('#sidebar-nav a.nav-link');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) {
+                                link.classList.add('active');
+                            }
+                        });
+                    }
+                });
+            }, {
+                rootMargin: '0px 0px -50% 0px',
+                threshold: 0.1
+            });
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Language switching functionality
+            const langButtons = document.querySelectorAll('.lang-btn');
+            let currentLang = 'en';
+
+            // Check URL hash for language
+            function getLanguageFromHash() {
+                const hash = window.location.hash.substring(1);
+                return ['en', 'uz', 'ru'].includes(hash) ? hash : 'en';
+            }
+
+            // Update active language button
+            function updateActiveLanguageButton(lang) {
+                langButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.dataset.lang === lang) {
+                        btn.classList.add('active');
+                    }
+                });
+            }
+
+            // Translate content
+            function translateContent(lang) {
+                const translation = translations[lang];
+                
+                // Translate all data-i18n elements
+                document.querySelectorAll('[data-i18n]').forEach(element => {
+                    const key = element.getAttribute('data-i18n');
+                    if (translation[key]) {
+                        element.textContent = translation[key];
+                    }
+                });
+
+                // Update dynamic content
+                updateDynamicContent(lang);
+            }
+
+            // Update content that needs special handling
+            function updateDynamicContent(lang) {
+                const translation = translations[lang];
+                
+                // Navigation links
+                document.querySelector('a[href="#summary"]').textContent = translation['nav-keypoints'];
+                document.querySelector('a[href="#acceptance"]').textContent = translation['nav-acceptance'];
+                document.querySelector('a[href="#service"]').textContent = translation['nav-service'];
+                document.querySelector('a[href="#conduct"]').textContent = translation['nav-conduct'];
+                document.querySelector('a[href="#intellectual-property"]').textContent = translation['nav-ip'];
+                document.querySelector('a[href="#disclaimers"]').textContent = translation['nav-disclaimers'];
+                document.querySelector('a[href="#liability"]').textContent = translation['nav-liability'];
+                document.querySelector('a[href="#termination"]').textContent = translation['nav-termination'];
+                document.querySelector('a[href="#law"]').textContent = translation['nav-law'];
+                document.querySelector('a[href="#contact"]').textContent = translation['nav-contact'];
+
+                // Key points section
+                document.querySelector('#summary h2').innerHTML = `<span class="text-3xl mr-3">💡</span> ${translation['keypoints-title']}`;
+                document.querySelector('#summary p').textContent = translation['keypoints-subtitle'];
+
+                // Summary details
+                const summaryDetails = document.querySelectorAll('#summary details');
+                summaryDetails[0].querySelector('summary span:first-child').textContent = translation['summary-1-title'];
+                summaryDetails[0].querySelector('p').textContent = translation['summary-1-text'];
+                summaryDetails[1].querySelector('summary span:first-child').textContent = translation['summary-2-title'];
+                summaryDetails[1].querySelector('p').textContent = translation['summary-2-text'];
+                summaryDetails[2].querySelector('summary span:first-child').textContent = translation['summary-3-title'];
+                summaryDetails[2].querySelector('p').textContent = translation['summary-3-text'];
+                summaryDetails[3].querySelector('summary span:first-child').textContent = translation['summary-4-title'];
+                summaryDetails[3].querySelector('p').textContent = translation['summary-4-text'];
+
+                // Sections
+                document.querySelector('#acceptance h2').textContent = translation['section-1-title'];
+                document.querySelector('#acceptance p').textContent = translation['section-1-text'];
+                
+                document.querySelector('#service h2').textContent = translation['section-2-title'];
+                document.querySelector('#service p').textContent = translation['section-2-text'];
+                
+                document.querySelector('#conduct h2').textContent = translation['section-3-title'];
+                document.querySelector('#conduct p').textContent = translation['section-3-text'];
+                const conductList = document.querySelector('#conduct ul');
+                conductList.innerHTML = translation['section-3-list'].map(item => `<li>${item}</li>`).join('');
+                
+                document.querySelector('#intellectual-property h2').textContent = translation['section-4-title'];
+                document.querySelector('#intellectual-property p').textContent = translation['section-4-text'];
+                
+                const disclaimersSection = document.querySelector('#disclaimers');
+                disclaimersSection.querySelector('h2').textContent = translation['section-5-title'];
+                const disclaimersParagraphs = disclaimersSection.querySelectorAll('p');
+                disclaimersParagraphs[0].textContent = translation['section-5-text'];
+                disclaimersParagraphs[1].textContent = translation['section-5-text2'];
+                disclaimersParagraphs[2].textContent = translation['section-5-text3'];
+                const disclaimersList = disclaimersSection.querySelector('ul');
+                disclaimersList.innerHTML = translation['section-5-list'].map(item => `<li>${item}</li>`).join('');
+                
+                document.querySelector('#liability h2').textContent = translation['section-6-title'];
+                document.querySelector('#liability p').textContent = translation['section-6-text'];
+                
+                document.querySelector('#termination h2').textContent = translation['section-7-title'];
+                document.querySelector('#termination p').textContent = translation['section-7-text'];
+                
+                document.querySelector('#law h2').textContent = translation['section-8-title'];
+                document.querySelector('#law p').textContent = translation['section-8-text'];
+                
+                const contactSection = document.querySelector('#contact');
+                contactSection.querySelector('h2').textContent = translation['section-9-title'];
+                contactSection.querySelector('p').textContent = translation['section-9-text'];
+                const contactInfo = contactSection.querySelectorAll('.not-prose p');
+                contactInfo[0].textContent = translation['contact-company'];
+                contactInfo[1].textContent = translation['contact-location'];
+                contactInfo[2].innerHTML = `${translation['contact-email']} <a href="mailto:yordamchi@chuqurtech.uz" class="text-blue-600 hover:underline">yordamchi@chuqurtech.uz</a>`;
+            }
+
+            // Initialize language based on URL hash
+            currentLang = getLanguageFromHash();
+            updateActiveLanguageButton(currentLang);
+            translateContent(currentLang);
+
+            // Language button event listeners
+            langButtons.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const newLang = btn.dataset.lang;
+                    currentLang = newLang;
+                    window.location.hash = newLang;
+                    updateActiveLanguageButton(newLang);
+                    translateContent(newLang);
+                });
+            });
+
+            // Listen for hash changes
+            window.addEventListener('hashchange', () => {
+                const newLang = getLanguageFromHash();
+                if (newLang !== currentLang) {
+                    currentLang = newLang;
+                    updateActiveLanguageButton(newLang);
+                    translateContent(newLang);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
